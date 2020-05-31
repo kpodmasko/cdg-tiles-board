@@ -1,0 +1,82 @@
+.card {
+  display: flex;
+  width: 100px;
+  height: 150px;
+  user-select: none;
+}
+
+.card__item {
+  border-radius: 10%;
+  width: 100%;
+}
+
+.card__item--guessed {
+  border: 5px dashed #000000;
+}
+
+.card__item--opened {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.card__item--opened:before,
+.card__item--opened:after {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  content: "CDG";
+  font-size: 7px;
+  color: white;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  background: #3948d9;
+}
+
+.card__item--opened:before {
+  top: 5px;
+  left: 5px;
+}
+
+.card__item--opened:after {
+  bottom: 5px;
+  right: 5px;
+}
+
+.card__item--closed {
+  position: relative;
+  background-color: #70aefd;
+  border: 5px solid #ffffff;
+}
+
+.card__item--closed:before {
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  content: "CDG";
+  font-size: 12px;
+  color: white;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  background: #3948d9;
+  left: 20px;
+  top: 45px;
+}
+
+.card__item--opened,
+.card__item--closed {
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card__content {
+  height: 90px;
+  width: 60px;
+  overflow: auto;
+}
