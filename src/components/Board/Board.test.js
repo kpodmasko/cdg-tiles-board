@@ -1,21 +1,21 @@
 import React from "react";
 import { render } from "@testing-library/react";
 
-import Template from ".";
+import Board from ".";
 import { testIds } from "@constants";
 
-describe("testing Template component", () => {
+describe("testing Board component", () => {
   it("renders without error", () => {
-    const { getByTestId } = render(<Template />);
-    const root = getByTestId(testIds.template);
+    const { getByTestId } = render(<Board />);
+    const root = getByTestId(testIds.board);
 
     expect(root).toBeInTheDocument();
   });
 
   it("handles prop className", () => {
     const testClassname = "test-classname";
-    const { getByTestId } = render(<Template className={testClassname} />);
-    const root = getByTestId(testIds.template);
+    const { getByTestId } = render(<Board className={testClassname} />);
+    const root = getByTestId(testIds.board);
 
     expect(root.classList.contains(testClassname)).toBe(true);
   });

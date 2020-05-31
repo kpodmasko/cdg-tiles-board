@@ -1,0 +1,23 @@
+.board {
+  align-items: baseline;
+  width: 100%;
+  min-height: 800px;
+  height: 100vh;
+  max-height: 1600px;
+  background-color: #99d6bd;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.board__title {
+  text-align: center;
+  color: #ffffff;
+}
+
+.board__cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
