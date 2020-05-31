@@ -7,8 +7,8 @@ import { testIds } from "@constants";
 describe("testing App component", () => {
   it("renders without error", () => {
     const { getByTestId } = render(<App />);
-    const appElement = getByTestId(testIds.app);
+    const root = getByTestId(testIds.app);
 
-    expect(appElement).toBeInTheDocument();
+    expect(root).toBeInTheDocument();
   });
 });
