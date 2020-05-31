@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Tiles Board",
+  "name": "Tiles Board (specially for CDG)",
   "icons": [
     {
       "src": "favicon.ico",
