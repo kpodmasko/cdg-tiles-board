@@ -8,6 +8,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "classnames": "^2.2.6",
+    "clone-deep": "^4.0.1",
     "craco-alias": "^2.1.1",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.7",

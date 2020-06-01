@@ -1,0 +1,27 @@
+.app {
+  background-color: #99d6bd;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app__header {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.app__reset-button {
+  height: 100%;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.app__game-over {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 72px;
+  height: 100%;
+  color: #ffffff;
+}

@@ -1,23 +1,22 @@
 import React, { useEffect, useState, useCallback, useRef, memo } from "react";
 import classNames from "classnames";
+import cloneDeep from "clone-deep";
 
 import Card from "@components/Card";
 import { testIds, cardsStates } from "@constants";
-import { shuffle } from "@helpers";
 
 import "./Board.css";
 
 const rootClassName = "board";
 
-function Board({ className, cards: _cards }) {
+function Board({ className, cards: _cards, onRoundPlayed, game }) {
   const rootClass = classNames(rootClassName, className);
 
-  const [cards, setCards] = useState({ ..._cards });
+  const [cards, setCards] = useState(cloneDeep(_cards));
   const [activeCardsIds, setActiveCardsIds] = useState([]);
-  const [game, setGame] = useState(shuffle(Object.keys(cards)));
-  const [round, setRound] = useState(1);
 
   const clicksBlocker = useRef(false);
+  const guessedCounter = useRef(0);
 
   const handleCardClick = useCallback(
     ({ id }) => {
@@ -63,24 +62,24 @@ function Board({ className, cards: _cards }) {
     if (firstCard.modelValue === secondCard.modelValue) {
       firstCard.state = cardsStates.GUESSED;
       secondCard.state = cardsStates.GUESSED;
+      guessedCounter.current = guessedCounter.current + 2;
     } else {
       firstCard.state = cardsStates.CLOSED;
       secondCard.state = cardsStates.CLOSED;
     }
 
+    onRoundPlayed(guessedCounter.current === game.length);
     setActiveCardsIds([]);
-    setRound((round) => round + 1);
-  }, [activeCardsIds, cards]);
+  }, [activeCardsIds, cards, onRoundPlayed]);
 
   useEffect(() => {
-    setCards({ ..._cards });
-    setRound(1);
-    setGame(shuffle(Object.keys(_cards)));
-  }, [_cards]);
+    setCards(cloneDeep(_cards));
+    setActiveCardsIds([]);
+    guessedCounter.current = 0;
+  }, [_cards, game]);
 
   return (
     <div data-testid={testIds.board} className={rootClass}>
-      <h1 className={`${rootClassName}__title`}>Round {round}</h1>
       <div className={`${rootClassName}__cards-container`}>
         {game.map((cardId) => {
           const { state, viewValue, id } = cards[cardId];

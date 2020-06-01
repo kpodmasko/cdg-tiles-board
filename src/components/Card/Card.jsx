@@ -5,7 +5,7 @@ import { testIds, cardsStates } from "@constants";
 
 import "./Card.css";
 
-export const rootClassName = "card";
+const rootClassName = "card";
 
 function Card({
   className,
