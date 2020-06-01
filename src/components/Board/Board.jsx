@@ -9,7 +9,13 @@ import "./Board.css";
 
 const rootClassName = "board";
 
-function Board({ className, cards: _cards, onRoundPlayed, game }) {
+function Board({
+  className,
+  cards: _cards,
+  onRoundPlayed,
+  game,
+  renderCardContent,
+}) {
   const rootClass = classNames(rootClassName, className);
 
   const [cards, setCards] = useState(cloneDeep(_cards));
@@ -93,9 +99,7 @@ function Board({ className, cards: _cards, onRoundPlayed, game }) {
               onClick={handleCardClick}
               onTransitionEnd={handleCardTransitionEnd}
             >
-              <div
-                style={{ background: viewValue, width: "100%", height: "100%" }}
-              />
+              {renderCardContent(viewValue)}
             </Card>
           );
         })}

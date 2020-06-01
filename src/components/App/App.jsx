@@ -12,6 +12,12 @@ const data = getData();
 
 const rootClassName = "app";
 
+function renderCardContent(viewValue) {
+  return (
+    <div style={{ background: viewValue, width: "100%", height: "100%" }} />
+  );
+}
+
 function App() {
   const [round, setRound] = useState(1);
   const [game, setGame] = useState(shuffle(Object.keys(data)));
@@ -49,7 +55,12 @@ function App() {
       {isGameOver ? (
         <div className={`${rootClassName}__game-over`}>Game is Over !!!</div>
       ) : (
-        <Board cards={data} onRoundPlayed={handleRoundPlayed} game={game} />
+        <Board
+          cards={data}
+          onRoundPlayed={handleRoundPlayed}
+          game={game}
+          renderCardContent={renderCardContent}
+        />
       )}
     </div>
   );
