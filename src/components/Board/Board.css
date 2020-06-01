@@ -5,6 +5,7 @@
   background-color: #99d6bd;
   overflow-x: hidden;
   overflow-y: auto;
+  perspective: 2000px;
 }
 
 .board__title {

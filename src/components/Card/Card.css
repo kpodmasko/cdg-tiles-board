@@ -2,28 +2,38 @@
   display: flex;
   width: 100px;
   height: 150px;
+  position: relative;
   user-select: none;
+  transform-style: preserve-3d;
 }
 
-.card__item {
-  border-radius: 10%;
-  width: 100%;
-}
-
-.card__item--guessed {
+.card--guessed {
+  box-sizing: border-box;
   border: 5px dashed #000000;
 }
 
-.card__item--opened {
+.card__part {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10%;
+  transform-style: preserve-3d;
+  transition: transform ease 500ms;
+  backface-visibility: hidden;
+}
+
+.card__part--front {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   background-color: #ffffff;
 }
 
-.card__item--opened:before,
-.card__item--opened:after {
+.card__part--front:before,
+.card__part--front:after {
   display: block;
   width: 20px;
   height: 20px;
@@ -37,23 +47,23 @@
   background: #3948d9;
 }
 
-.card__item--opened:before {
+.card__part--front:before {
   top: 5px;
   left: 5px;
 }
 
-.card__item--opened:after {
+.card__part--front:after {
   bottom: 5px;
   right: 5px;
 }
 
-.card__item--closed {
-  position: relative;
-  background-color: #70aefd;
+.card__part--back {
+  box-sizing: border-box;
   border: 5px solid #ffffff;
+  background-color: #70aefd;
 }
 
-.card__item--closed:before {
+.card__part--back:before {
   display: block;
   width: 50px;
   height: 50px;
@@ -69,14 +79,37 @@
   top: 45px;
 }
 
-.card__item--opened,
-.card__item--closed {
+.card__part--front,
+.card__part--back {
   cursor: pointer;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card--opened .card__part--front {
+  transform: rotateY(0deg);
+}
+
+.card--opened .card__part--back {
+  transform: rotateY(180deg);
+}
+
+.card--closed .card__part--front {
+  transform: rotateY(-180deg);
+}
+
+.card--closed .card__part--back {
+  transform: rotateY(0deg);
+}
+
+.card--guessed .card__part {
+  transform: translate(9999px, 0);
+  /*visibility: hidden;*/
+  transition: transform ease 5000ms;
 }
 
 .card__content {
   height: 90px;
   width: 60px;
   overflow: auto;
+  pointer-events: none;
 }
