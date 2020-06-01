@@ -4,3 +4,9 @@ export const testIds = {
   board: "board",
   card: "card",
 };
+
+export const cardsStates = {
+  GUESSED: "GUESSED",
+  OPENED: "OPENED",
+  CLOSED: "CLOSED",
+};

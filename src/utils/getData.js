@@ -1,85 +1,85 @@
-const data = [
-  {
-    id: "1",
+const data = {
+  id1: {
+    id: "id1",
     viewValue: "red",
     modelValue: "red",
   },
-  {
-    id: "2",
+  id2: {
+    id: "id2",
     viewValue: "red",
     modelValue: "red",
   },
-  {
-    id: "3",
+  id3: {
+    id: "id3",
     viewValue: "green",
     modelValue: "green",
   },
-  {
-    id: "4",
+  id4: {
+    id: "id4",
     viewValue: "green",
     modelValue: "green",
   },
-  {
-    id: "5",
+  id5: {
+    id: "id5",
     viewValue: "yellow",
     modelValue: "yellow",
   },
-  {
-    id: "6",
+  id6: {
+    id: "id6",
     viewValue: "yellow",
     modelValue: "yellow",
   },
-  {
-    id: "7",
+  id7: {
+    id: "id7",
     viewValue: "pink",
     modelValue: "pink",
   },
-  {
-    id: "8",
+  id8: {
+    id: "id8",
     viewValue: "pink",
     modelValue: "pink",
   },
-  {
-    id: "9",
+  id9: {
+    id: "id9",
     viewValue: "orange",
     modelValue: "orange",
   },
-  {
-    id: "10",
+  id10: {
+    id: "id10",
     viewValue: "orange",
     modelValue: "orange",
   },
-  {
-    id: "11",
+  id11: {
+    id: "id11",
     viewValue: "purple",
     modelValue: "purple",
   },
-  {
-    id: "12",
+  id12: {
+    id: "id12",
     viewValue: "purple",
     modelValue: "purple",
   },
-  {
-    id: "13",
+  id13: {
+    id: "id13",
     viewValue: "black",
     modelValue: "black",
   },
-  {
-    id: "14",
+  id14: {
+    id: "id14",
     viewValue: "black",
     modelValue: "black",
   },
-  {
-    id: "15",
+  id15: {
+    id: "id15",
     viewValue: "gray",
     modelValue: "gray",
   },
-  {
-    id: "16",
+  id16: {
+    id: "id16",
     viewValue: "gray",
     modelValue: "gray",
   },
-];
+};
 
 export default function getData() {
   return data;

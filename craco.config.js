@@ -10,7 +10,8 @@ module.exports = {
                 aliases: {
                     "@components": "/components",
                     "@utils": "./utils",
-                    "@constants": "./utils/constants"
+                    "@constants": "./utils/constants",
+                    "@helpers": "./utils/helpers"
                 }
             }
         }
