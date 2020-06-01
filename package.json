@@ -17,9 +17,9 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "craco start",
+    "start": "craco start --no-cache",
     "build": "craco build",
-    "test": "craco test",
+    "test": "craco test --no-cache",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
