@@ -1,8 +1,10 @@
 .board {
-  align-items: baseline;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
+  height: 100%;
+  overflow: auto;
   perspective: 2000px;
 }
 
@@ -17,10 +19,36 @@
   justify-content: center;
   align-items: center;
   width: 550px;
-  height: 800px;
+  max-height: 800px;
   margin: auto;
 }
 
 .board__card {
   margin: 5px 10px;
+}
+
+/* task does not requires mobile but I want to add it to 100% complete app */
+
+@media screen and (max-height: 750px) {
+  .board__cards-container {
+    width: 500px;
+  }
+}
+
+@media screen and (max-height: 650px) {
+  .board__cards-container {
+    width: 400px;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .board__cards-container {
+    width: 350px;
+  }
+}
+
+@media screen and (max-height: 400px) {
+  .board__cards-container {
+    width: 300px;
+  }
 }

@@ -34,12 +34,36 @@
 .app__game-over-main {
   background: #3948d9;
   padding: 20px 10px 0 10px;
+  margin-left: 15px;
 }
 
-/* min device - iphone 5 */
 /* task does not requires mobile but I want to add it to 100% complete app */
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px), screen and (max-height: 450px) {
   .app__game-over {
     font-size: 36px;
+  }
+
+  .app__header {
+    font-size: 10px;
+  }
+
+  .app__game-over-main {
+    padding: 15px 10px 0 10px;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 350px), screen and (max-height: 350px) {
+  .app__game-over {
+    font-size: 24px;
+  }
+
+  .app__header {
+    font-size: 7px;
+  }
+
+  .app__game-over-main {
+    padding: 10px 10px 0 10px;
+    margin-left: 5px;
   }
 }
