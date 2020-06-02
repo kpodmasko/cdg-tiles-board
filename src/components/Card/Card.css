@@ -102,9 +102,8 @@
 }
 
 .card--guessed .card__part {
-  transform: translate(9999px, 0);
-  /*visibility: hidden;*/
-  transition: transform ease 5000ms;
+  opacity: 0;
+  transition: opacity ease 250ms;
 }
 
 .card__content {
