@@ -3,12 +3,17 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  /* min device - iphone 5 */
+  min-width: 320px;
+  min-height: 320px;
 }
 
 .app__header {
   display: flex;
   justify-content: center;
   align-items: baseline;
+  position: absolute;
+  left: 15px;
 }
 
 .app__reset-button {
@@ -24,4 +29,17 @@
   font-size: 72px;
   height: 100%;
   color: #ffffff;
+}
+
+.app__game-over-main {
+  background: #3948d9;
+  padding: 20px 10px 0 10px;
+}
+
+/* min device - iphone 5 */
+/* task does not requires mobile but I want to add it to 100% complete app */
+@media only screen and (max-width: 600px) {
+  .app__game-over {
+    font-size: 36px;
+  }
 }

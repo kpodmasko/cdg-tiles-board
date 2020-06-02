@@ -54,7 +54,14 @@ function App() {
         </span>
       </header>
       {isGameOver ? (
-        <div className={`${rootClassName}__game-over`}>Game is Over !!!</div>
+        <div className={`${rootClassName}__game-over`}>
+          <p>
+            GAME IS
+            <span className={`${rootClassName}__game-over-main`}>
+              <sup>O</sup>V<sup>E</sup>R
+            </span>
+          </p>
+        </div>
       ) : (
         <Board
           cards={data}
