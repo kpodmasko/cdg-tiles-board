@@ -10,7 +10,7 @@ import "./Board.css";
 const rootClassName = "board";
 
 function Board({
-  className,
+  className = "",
   cards: _cards,
   onRoundPlayed,
   game,
@@ -18,8 +18,8 @@ function Board({
 }) {
   const rootClass = classNames(rootClassName, className);
 
-  const [cards, setCards] = useState(cloneDeep(_cards));
-  const [activeCardsIds, setActiveCardsIds] = useState([]);
+  const [cards, setCards] = useState();
+  const [activeCardsIds, setActiveCardsIds] = useState();
 
   const clicksBlocker = useRef(false);
   const guessedCounter = useRef(0);
@@ -74,9 +74,12 @@ function Board({
       secondCard.state = cardsStates.CLOSED;
     }
 
-    onRoundPlayed(guessedCounter.current === game.length);
+    if (onRoundPlayed) {
+      onRoundPlayed(guessedCounter.current === game.length);
+    }
+
     setActiveCardsIds([]);
-  }, [activeCardsIds, cards, onRoundPlayed]);
+  }, [activeCardsIds, cards, onRoundPlayed, game]);
 
   useEffect(() => {
     setCards(cloneDeep(_cards));
@@ -87,22 +90,24 @@ function Board({
   return (
     <div data-testid={testIds.board} className={rootClass}>
       <div className={`${rootClassName}__cards-container`}>
-        {game.map((cardId) => {
-          const { state, viewValue, id } = cards[cardId];
+        {game &&
+          cards &&
+          game.map((cardId) => {
+            const { state, viewValue, id } = cards[cardId] || {};
 
-          return (
-            <Card
-              id={id}
-              key={id}
-              className={`${rootClassName}__card`}
-              state={state}
-              onClick={handleCardClick}
-              onTransitionEnd={handleCardTransitionEnd}
-            >
-              {renderCardContent(viewValue)}
-            </Card>
-          );
-        })}
+            return (
+              <Card
+                id={id || cardId}
+                key={id || cardId}
+                className={`${rootClassName}__card`}
+                state={state}
+                onClick={handleCardClick}
+                onTransitionEnd={handleCardTransitionEnd}
+              >
+                {renderCardContent ? renderCardContent(viewValue) : viewValue}
+              </Card>
+            );
+          })}
       </div>
     </div>
   );

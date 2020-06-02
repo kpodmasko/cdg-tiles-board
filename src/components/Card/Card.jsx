@@ -8,12 +8,12 @@ import "./Card.css";
 const rootClassName = "card";
 
 function Card({
-  className,
+  className = "",
   state = cardsStates.CLOSED,
   children,
   onClick,
   onTransitionEnd,
-  id,
+  id = Math.random(),
 }) {
   const rootClass = classNames(`${rootClassName}`, className, {
     [`${rootClassName}--opened`]: state === cardsStates.OPENED,
@@ -23,20 +23,29 @@ function Card({
 
   const handleClick = useCallback(
     (event) => {
-      onClick({ event, id });
+      if (onClick) {
+        onClick({ event, id });
+      }
     },
     [id, onClick]
   );
 
   const handleTransitionEnd = useCallback(
     (event) => {
-      onTransitionEnd({ event, id });
+      if (onTransitionEnd) {
+        onTransitionEnd({ event, id });
+      }
     },
     [id, onTransitionEnd]
   );
 
   return (
-    <div className={rootClass} data-testid={testIds.card} onClick={handleClick}>
+    <div
+      className={rootClass}
+      data-testid={testIds.card}
+      id={id}
+      onClick={handleClick}
+    >
       <div
         className={`${rootClassName}__part ${rootClassName}__part--front`}
         onTransitionEnd={handleTransitionEnd}
