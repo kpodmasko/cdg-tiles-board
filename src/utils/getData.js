@@ -1,3 +1,7 @@
+// data must be object instead of array as during the game it will be a lot of updates in one card
+// in array we will do it in O(n)
+// in object O(1)
+
 const data = {
   id1: {
     id: "id1",

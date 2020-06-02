@@ -46,6 +46,7 @@ function App() {
           className={`${rootClassName}__reset-button`}
           onClick={handleResetClick}
         >
+          {/*to skip adding FA library and save space*/}
           <img
             alt="Reset"
             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABFElEQVRIie3VMW7CMBTGcahUlsLIyAVgQGJpT8EFeglOQtUcgTN0ao9BJ1ZWptKBAfHr0IfkpoE4Vdn4pMiJ8773jx37udW6qonQRz95HmDjtz7xjieMcpO38RJXO+mf4lABOWqPAp06wCwxzWpi73CPZ+zC83YSgkkSKO4nmSMfYx2+oiqgh1XF0FfoNYDsYrqG5ZeLM/O7yAFEniI883NBIDdpyXsf9uWlAN2wf1wEcMp/89dkuSoDtvEl3UsB1tEOy4H/BXiN9jE3QbrMk77qZY5RbJYdxpmAZhs12TDrBpD8UoNb34XrGFjgoe7Ha1AsW+hE4n3F0I86YJp4Kst9HWiEOZbYVkA2GCTxPw6sq7L0BQdDMu9aZpOpAAAAAElFTkSuQmCC"

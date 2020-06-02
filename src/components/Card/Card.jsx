@@ -13,7 +13,7 @@ function Card({
   children,
   onClick,
   onTransitionEnd,
-  id = Math.random(),
+  id = Math.random(), // as it sets id attribute to div it must be unique
 }) {
   const rootClass = classNames(`${rootClassName}`, className, {
     [`${rootClassName}--opened`]: state === cardsStates.OPENED,
@@ -57,4 +57,6 @@ function Card({
   );
 }
 
+// memo is used as in App we guarantee that new instances(objects, functions, arrays) will be passed only
+// if it really change so shallow compare will help to optimize render
 export default memo(Card);

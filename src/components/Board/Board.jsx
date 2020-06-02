@@ -11,9 +11,9 @@ const rootClassName = "board";
 
 function Board({
   className = "",
-  cards: _cards,
+  cards: _cards, // does not default object as useEffect watches it and every new default instance will trigger it
   onRoundPlayed,
-  game,
+  game, // does not default array as useEffect watches it and every new default instance will trigger it
   renderCardContent,
 }) {
   const rootClass = classNames(rootClassName, className);
@@ -21,7 +21,10 @@ function Board({
   const [cards, setCards] = useState();
   const [activeCardsIds, setActiveCardsIds] = useState();
 
+  // blocks cards clicking while card is being flipped by animation
+  // not state as render does not depend on it and it should not reset on every render
   const clicksBlocker = useRef(false);
+  // not state as render does not depend on it and it should not reset on every render
   const guessedCounter = useRef(0);
 
   const handleCardClick = useCallback(
@@ -90,27 +93,33 @@ function Board({
   return (
     <div data-testid={testIds.board} className={rootClass}>
       <div className={`${rootClassName}__cards-container`}>
-        {game &&
-          cards &&
-          game.map((cardId) => {
-            const { state, viewValue, id } = cards[cardId] || {};
+        {
+          // we should use cards to make a fast update (objects - O(1); arrays - O(n))
+          // and game for shuffling and rendering
+          game &&
+            cards &&
+            game.map((cardId) => {
+              const { state, viewValue, id } = cards[cardId] || {};
 
-            return (
-              <Card
-                id={id || cardId}
-                key={id || cardId}
-                className={`${rootClassName}__card`}
-                state={state}
-                onClick={handleCardClick}
-                onTransitionEnd={handleCardTransitionEnd}
-              >
-                {renderCardContent ? renderCardContent(viewValue) : viewValue}
-              </Card>
-            );
-          })}
+              return (
+                <Card
+                  id={id || cardId}
+                  key={id || cardId}
+                  className={`${rootClassName}__card`}
+                  state={state}
+                  onClick={handleCardClick}
+                  onTransitionEnd={handleCardTransitionEnd}
+                >
+                  {renderCardContent ? renderCardContent(viewValue) : viewValue}
+                </Card>
+              );
+            })
+        }
       </div>
     </div>
   );
 }
 
+// memo is used as in App we guarantee that new instances(objects, functions, arrays) will be passed only
+// if it really change so shallow compare will help to optimize render
 export default memo(Board);
