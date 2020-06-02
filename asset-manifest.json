@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/cdg-tiles-board/static/css/main.368213b7.chunk.css",
+    "main.js": "/cdg-tiles-board/static/js/main.fea1144d.chunk.js",
+    "main.js.map": "/cdg-tiles-board/static/js/main.fea1144d.chunk.js.map",
+    "runtime-main.js": "/cdg-tiles-board/static/js/runtime-main.a99e5b7f.js",
+    "runtime-main.js.map": "/cdg-tiles-board/static/js/runtime-main.a99e5b7f.js.map",
+    "static/js/2.7f2e5cc2.chunk.js": "/cdg-tiles-board/static/js/2.7f2e5cc2.chunk.js",
+    "static/js/2.7f2e5cc2.chunk.js.map": "/cdg-tiles-board/static/js/2.7f2e5cc2.chunk.js.map",
+    "index.html": "/cdg-tiles-board/index.html",
+    "precache-manifest.ffc67d00ed3bd2ca6eb1cb9dc39a51bd.js": "/cdg-tiles-board/precache-manifest.ffc67d00ed3bd2ca6eb1cb9dc39a51bd.js",
+    "service-worker.js": "/cdg-tiles-board/service-worker.js",
+    "static/css/main.368213b7.chunk.css.map": "/cdg-tiles-board/static/css/main.368213b7.chunk.css.map",
+    "static/js/2.7f2e5cc2.chunk.js.LICENSE.txt": "/cdg-tiles-board/static/js/2.7f2e5cc2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a99e5b7f.js",
+    "static/js/2.7f2e5cc2.chunk.js",
+    "static/css/main.368213b7.chunk.css",
+    "static/js/main.fea1144d.chunk.js"
+  ]
+}
