@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/cdg-tiles-board/precache-manifest.dc595494bb5b1dee525e7dbcf7b420fc.js"
+  "/cdg-tiles-board/precache-manifest.533ea0dd83b91cabf385cb36aadc4986.js"
 );
 
 self.addEventListener('message', (event) => {

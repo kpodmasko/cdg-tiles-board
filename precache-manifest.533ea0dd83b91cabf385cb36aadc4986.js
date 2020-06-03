@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b874b48c08119d2a036485c0c4c594ac",
+    "revision": "851ca27f32724294baf0255ecdde282a",
     "url": "/cdg-tiles-board/index.html"
   },
   {
-    "revision": "57fc08aeb4fa2165bce1",
+    "revision": "c11b87ab818da8f7a0c3",
     "url": "/cdg-tiles-board/static/css/main.89696441.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cdg-tiles-board/static/js/2.7f2e5cc2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "57fc08aeb4fa2165bce1",
-    "url": "/cdg-tiles-board/static/js/main.fea1144d.chunk.js"
+    "revision": "c11b87ab818da8f7a0c3",
+    "url": "/cdg-tiles-board/static/js/main.72d8b424.chunk.js"
   },
   {
     "revision": "9e7183195cf22d50186f",

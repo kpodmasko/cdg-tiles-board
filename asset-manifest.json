@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/cdg-tiles-board/static/css/main.89696441.chunk.css",
-    "main.js": "/cdg-tiles-board/static/js/main.fea1144d.chunk.js",
-    "main.js.map": "/cdg-tiles-board/static/js/main.fea1144d.chunk.js.map",
+    "main.js": "/cdg-tiles-board/static/js/main.72d8b424.chunk.js",
+    "main.js.map": "/cdg-tiles-board/static/js/main.72d8b424.chunk.js.map",
     "runtime-main.js": "/cdg-tiles-board/static/js/runtime-main.a99e5b7f.js",
     "runtime-main.js.map": "/cdg-tiles-board/static/js/runtime-main.a99e5b7f.js.map",
     "static/js/2.7f2e5cc2.chunk.js": "/cdg-tiles-board/static/js/2.7f2e5cc2.chunk.js",
     "static/js/2.7f2e5cc2.chunk.js.map": "/cdg-tiles-board/static/js/2.7f2e5cc2.chunk.js.map",
     "index.html": "/cdg-tiles-board/index.html",
-    "precache-manifest.dc595494bb5b1dee525e7dbcf7b420fc.js": "/cdg-tiles-board/precache-manifest.dc595494bb5b1dee525e7dbcf7b420fc.js",
+    "precache-manifest.533ea0dd83b91cabf385cb36aadc4986.js": "/cdg-tiles-board/precache-manifest.533ea0dd83b91cabf385cb36aadc4986.js",
     "service-worker.js": "/cdg-tiles-board/service-worker.js",
     "static/css/main.89696441.chunk.css.map": "/cdg-tiles-board/static/css/main.89696441.chunk.css.map",
     "static/js/2.7f2e5cc2.chunk.js.LICENSE.txt": "/cdg-tiles-board/static/js/2.7f2e5cc2.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.a99e5b7f.js",
     "static/js/2.7f2e5cc2.chunk.js",
     "static/css/main.89696441.chunk.css",
-    "static/js/main.fea1144d.chunk.js"
+    "static/js/main.72d8b424.chunk.js"
   ]
 }
