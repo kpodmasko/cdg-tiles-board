@@ -29,7 +29,11 @@ function Board({
 
   const handleCardClick = useCallback(
     ({ id }) => {
-      if (!id || clicksBlocker.current) {
+      if (
+        !id ||
+        clicksBlocker.current ||
+        cards[id].state === cardsStates.GUESSED
+      ) {
         return;
       }
 
