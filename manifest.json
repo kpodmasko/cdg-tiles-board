@@ -1,6 +1,6 @@
 {
-  "short_name": "CDG Tiles Board",
-  "name": "Tiles Board (specially for CDG)",
+  "short_name": "CDG",
+  "name": "Tiles Board",
   "icons": [
     {
       "src": "favicon.ico",

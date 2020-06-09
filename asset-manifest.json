@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/cdg-tiles-board/static/css/main.89696441.chunk.css",
-    "main.js": "/cdg-tiles-board/static/js/main.72d8b424.chunk.js",
-    "main.js.map": "/cdg-tiles-board/static/js/main.72d8b424.chunk.js.map",
-    "runtime-main.js": "/cdg-tiles-board/static/js/runtime-main.a99e5b7f.js",
-    "runtime-main.js.map": "/cdg-tiles-board/static/js/runtime-main.a99e5b7f.js.map",
-    "static/js/2.7f2e5cc2.chunk.js": "/cdg-tiles-board/static/js/2.7f2e5cc2.chunk.js",
-    "static/js/2.7f2e5cc2.chunk.js.map": "/cdg-tiles-board/static/js/2.7f2e5cc2.chunk.js.map",
-    "index.html": "/cdg-tiles-board/index.html",
-    "precache-manifest.533ea0dd83b91cabf385cb36aadc4986.js": "/cdg-tiles-board/precache-manifest.533ea0dd83b91cabf385cb36aadc4986.js",
-    "service-worker.js": "/cdg-tiles-board/service-worker.js",
-    "static/css/main.89696441.chunk.css.map": "/cdg-tiles-board/static/css/main.89696441.chunk.css.map",
-    "static/js/2.7f2e5cc2.chunk.js.LICENSE.txt": "/cdg-tiles-board/static/js/2.7f2e5cc2.chunk.js.LICENSE.txt"
+    "main.css": "/tiles-board/static/css/main.89696441.chunk.css",
+    "main.js": "/tiles-board/static/js/main.ee6d74d5.chunk.js",
+    "main.js.map": "/tiles-board/static/js/main.ee6d74d5.chunk.js.map",
+    "runtime-main.js": "/tiles-board/static/js/runtime-main.aa5f83fb.js",
+    "runtime-main.js.map": "/tiles-board/static/js/runtime-main.aa5f83fb.js.map",
+    "static/js/2.ac8ce238.chunk.js": "/tiles-board/static/js/2.ac8ce238.chunk.js",
+    "static/js/2.ac8ce238.chunk.js.map": "/tiles-board/static/js/2.ac8ce238.chunk.js.map",
+    "index.html": "/tiles-board/index.html",
+    "precache-manifest.db6c484643d5838fb2d6683050172da3.js": "/tiles-board/precache-manifest.db6c484643d5838fb2d6683050172da3.js",
+    "service-worker.js": "/tiles-board/service-worker.js",
+    "static/css/main.89696441.chunk.css.map": "/tiles-board/static/css/main.89696441.chunk.css.map",
+    "static/js/2.ac8ce238.chunk.js.LICENSE.txt": "/tiles-board/static/js/2.ac8ce238.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.a99e5b7f.js",
-    "static/js/2.7f2e5cc2.chunk.js",
+    "static/js/runtime-main.aa5f83fb.js",
+    "static/js/2.ac8ce238.chunk.js",
     "static/css/main.89696441.chunk.css",
-    "static/js/main.72d8b424.chunk.js"
+    "static/js/main.ee6d74d5.chunk.js"
   ]
 }
